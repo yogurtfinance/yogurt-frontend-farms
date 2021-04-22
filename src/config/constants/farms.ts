@@ -35,6 +35,22 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 4,
+    risk: 5,
+    lpSymbol: 'BACTERIUM-DODO LP',
+    lpAddresses: {
+      97: '',
+      56: '0x52cabaec0d52fe359d5da9c3ca876d111f6f3289',
+    },
+    tokenSymbol: 'BCTRM',
+    tokenAddresses: {
+      97: '',
+      56: '0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
+    },
+    quoteTokenSymbol: QuoteToken.BCTRM,
+    quoteTokenAdresses: contracts.bacterium,
+   },
+  {
     pid: 3,
     risk: 5,
     isTokenOnly: true,
