@@ -41,7 +41,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'BCTRM',
     lpAddresses: {
       97: '',
-      56: '0xd585be33109c1adfa6c0b1edae603eaf1e9bb979', // EGG-BUSD LP BCTRM-busdolacak
+      56: '0xd585be33109c1adfa6c0b1edae603eaf1e9bb979', // BCTRM-BUSD LP BCTRM-busdolacak
     },
     tokenSymbol: 'BCTRM',
     tokenAddresses: {
