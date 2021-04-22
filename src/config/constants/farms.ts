@@ -64,8 +64,8 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
     },
-    quoteTokenSymbol: QuoteToken.CAKE,
-    quoteTokenAdresses: contracts.cake,
+    quoteTokenSymbol: QuoteToken.Bacterium,
+    quoteTokenAdresses: contracts.bacterium,
    },
     
 ]
