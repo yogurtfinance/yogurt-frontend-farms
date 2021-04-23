@@ -49,18 +49,18 @@ const config: MenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-      {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
-      },
-      {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/yogurt-finance',
-      },
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/yogurt-finance/',
-      },
+      //{
+      //  label: 'PancakeSwap',
+      //  href: 'https://pancakeswap.info/token/0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
+      //},
+      //{
+      //  label: 'CoinGecko',
+      //  href: 'https://www.coingecko.com/en/coins/yogurt-finance',
+      //},
+      //{
+      //  label: 'CoinMarketCap',
+      //  href: 'https://coinmarketcap.com/currencies/yogurt-finance/',
+      //},
       {
         label: 'AstroTools',
         href: 'https://app.astrotools.io/pancake-pair-explorer/0xd585be33109c1adfa6c0b1edae603eaf1e9bb979',
