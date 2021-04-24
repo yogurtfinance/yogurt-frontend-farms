@@ -71,12 +71,12 @@ const farms: FarmConfig[] = [
     pid: 6,
     risk: 5,
     isTokenOnly: true,
-    lpSymbol: 'WBNB',
+    lpSymbol: 'BCTRM',
     lpAddresses: {
       97: '',
       56: '0x1Fd18835D1AF8E7E51430073aD7e288AFd9F3D86', // BCTRM-BNB
     },
-    tokenSymbol: 'WBNB',
+    tokenSymbol: 'BCTRM',
     tokenAddresses: {
       97: '',
       56: '0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
