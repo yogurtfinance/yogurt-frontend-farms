@@ -67,7 +67,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BACTERIUM,
     quoteTokenAdresses: contracts.bacterium,
    },
-    
+   {
+    pid: 5,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'WBNB',
+    lpAddresses: {
+      97: '',
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', // BCTRM-BNB
+    },
+    tokenSymbol: 'BCTRM',
+    tokenAddresses: {
+      97: '',
+      56: '0x2eFE591E96ad36Aa3Bb769D486aFD713ce2F91B4',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  }, 
 ]
 
 export default farms
