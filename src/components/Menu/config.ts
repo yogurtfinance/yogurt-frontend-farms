@@ -75,6 +75,14 @@ const config: MenuEntry[] = [
         label: 'Github',
         href: 'https://github.com/yogurtfinance/',
       },
+      {
+        label: "Docs",
+        href: "https://yogurtfinance.gitbook.io/yogurt-finance/",
+      },
+      {
+        label: "RoadMap",
+        href: "https://yogurtfinance.gitbook.io/yogurt-finance/roadmap",
+      },
     ],
   },
 ]
