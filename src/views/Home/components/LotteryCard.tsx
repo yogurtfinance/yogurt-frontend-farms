@@ -61,7 +61,7 @@ const FarmedStakingCard = () => {
     }
   }, [onMultiClaim, setRequestedClaim])
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="BCTRM" />)
 
   return (
     <StyledLotteryCard>
@@ -72,7 +72,7 @@ const FarmedStakingCard = () => {
         <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} />
         <Block>
           <CakeWinnings />
-          <Label>{TranslateString(552, 'CAKE to Collect')}</Label>
+          <Label>{TranslateString(552, 'BCTRM to Collect')}</Label>
         </Block>
         <Block>
           <LotteryJackpot />
