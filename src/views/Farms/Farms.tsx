@@ -47,7 +47,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
-  const bctrmaOnlyFarms = activeFarms.filter(
+  const bctrmOnlyFarms = activeFarms.filter(
     (farm) => farm.lpSymbol.startsWith("BCTRM"),
 
   )
