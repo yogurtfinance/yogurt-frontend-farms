@@ -137,8 +137,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           <Route exact path={`${path}`}>
             {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
           </Route>
-          <Route exact path={`${path}/pasta`}>
-          {stakedOnly ? farmsList(stakedPastaOnlyFarms, false) : farmsList(bctrmOnlyFarms, false)}
+          <Route exact path={`${path}/bctrm`}>
+          {stakedOnly ? farmsList(stakedBctrmOnlyFarms, false) : farmsList(bctrmOnlyFarms, false)}
           </Route>
           <Route exact path={`${path}/busd`}>
             {stakedOnly ? farmsList(stakedBusdOnlyFarms, false) : farmsList(busdOnlyFarms, false)}
