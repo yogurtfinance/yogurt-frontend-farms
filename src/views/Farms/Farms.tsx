@@ -65,7 +65,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const stakedBnbOnlyFarms = bnbOnlyFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
-  const stakeBctrmOnlyFarms = bctrmOnlyFarms.filter(
+  const stakedBctrmOnlyFarms = bctrmOnlyFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
