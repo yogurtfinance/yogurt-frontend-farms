@@ -47,7 +47,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
-  const bctrmOnlyFarms = activeFarms.filter(
+  const bctrmaOnlyFarms = activeFarms.filter(
     (farm) => farm.lpSymbol.startsWith("BCTRM"),
 
   )
@@ -65,7 +65,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const stakedBnbOnlyFarms = bnbOnlyFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
-  const stakedBctrmOnlyFarms = bctrmOnlyFarms.filter(
+  const stakeBctrmOnlyFarms = bctrmOnlyFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
@@ -79,11 +79,14 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
         //   return farm
         // }
-        const cakeRewardPerBlock = new BigNumber(farm.bctrmPerBlock || 1).times(new BigNumber(farm.poolWeight)) .div(new BigNumber(10).pow(18))
+               const cakeRewardPerBlock = new BigNumber(farm.bctrmPerBlock || 1).times(new BigNumber(farm.poolWeight)) .div(new BigNumber(10).pow(18))
         const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const cakeRewardPerMonth = cakeRewardPerYear.div(12)
 
         let apy = cakePrice.times(cakeRewardPerYear);
-
+        if (farm.quoteTokenSymbol === QuoteToken.bctrm) {
+          apy = cakePrice.times(cakeRewardPerMonth);
+        }
         let totalValue = new BigNumber(farm.lpTotalInQuoteToken || 0);
 
         if (farm.quoteTokenSymbol === QuoteToken.BNB) {
@@ -134,8 +137,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           <Route exact path={`${path}`}>
             {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
           </Route>
-          <Route exact path={`${path}/bctrm`}>
-          {stakedOnly ? farmsList(stakedBctrmOnlyFarms, false) : farmsList(bctrmOnlyFarms, false)}
+          <Route exact path={`${path}/pasta`}>
+          {stakedOnly ? farmsList(stakedPastaOnlyFarms, false) : farmsList(bctrmOnlyFarms, false)}
           </Route>
           <Route exact path={`${path}/busd`}>
             {stakedOnly ? farmsList(stakedBusdOnlyFarms, false) : farmsList(busdOnlyFarms, false)}
@@ -145,7 +148,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           </Route>
         </FlexLayout>
       </div>
-      <Image src="/images/BCTRM/8.png" alt="illustration" width={1352} height={587} responsive />
+      <Image src="/images/egg/8.png" alt="illustration" width={1352} height={587} responsive />
     </Page>
   )
 }
